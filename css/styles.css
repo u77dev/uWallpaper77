@@ -1,0 +1,87 @@
+@import url(../fonts/MPLUS1p/stylesheet.css);
+
+html {
+  width: 100vw;
+  height: 100vh;
+  background: #3f5a79;
+  background: linear-gradient(45deg, rgba(62,62,113,1) 0%, rgba(63,116,128,1) 100%);
+  overflow: hidden;
+}
+
+body {
+  background-color: transparent;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  color: red;
+  margin-left: 20px;
+}
+
+#particles-js {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.signaling {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* -webkit-box-shadow: 0px 0px 2rem 1rem rgba(255, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 0px 2rem 0px rgba(255, 0, 0, 0.2) inset; */
+  box-shadow: 0px 0px 5rem 1rem red inset;
+}
+
+/* .signaling.pulse */
+.signaling {
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  from {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  to {
+    top: -6rem;
+    left: -6rem;
+    width: calc(100% + 12rem);
+    height: calc(100% + 12rem);
+  }
+}
+
+.clock-wrapper {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+#clock {
+  display: inline-block;
+  font-size: 5rem;
+  line-height: 5rem;
+  background-color: rgba(107, 107, 107, 0.4);
+  margin: 1rem;
+  padding: 1rem 2rem 1.7rem;
+  border-radius: 1rem;
+}
